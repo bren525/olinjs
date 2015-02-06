@@ -10,12 +10,12 @@ price: Number,
 out: Boolean
 });
 
-module.exports.ingredients = mongoose.model('Ingredients',ingredientsSchema);
+module.exports.Ingredients = mongoose.model('Ingredients',ingredientsSchema);
 
 var orderSchema = mongoose.Schema({
 customer: String,
 ingredients: [String]
 });
 
-module.exports.orders = mongoose.model('Orders',orderSchema);
+module.exports.Orders = mongoose.model('Orders',orderSchema);
 
