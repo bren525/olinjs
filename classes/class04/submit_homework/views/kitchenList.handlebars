@@ -1,0 +1,10 @@
+<ul>
+{{#each list}}
+  <form action="Blank" method="GET" class = "completeForm">
+    Customer: {{this.customer}} Ingredients: {{this.ingredients}}
+    <input type="text" name="id" value="{{this._id}}" style='display: none;'/>
+    <input type="submit" value="Complete"/>
+  </form>
+{{/each}}
+</ul>
+<script type="text/javascript" src="javascripts/kitchenListFront.js"></script>
