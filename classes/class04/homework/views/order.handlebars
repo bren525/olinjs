@@ -1,0 +1,19 @@
+<h1>Order</h1>
+
+<form id="orderForm" action="Blank" method="GET">
+	<ul>
+	{{#each list}}
+		{{#if this.out}}
+		{{else}}
+	  	{{this.name}} ${{this.price}}
+	  	<input type='checkbox' ingredient = "{{this.name}}" price = "{{this.price}}" class="ingredients"/>
+	  	<br>
+	  	{{/if}}
+	{{/each}}
+	</ul>
+	<p style="display:inline;">Total Cost: $<div id="total" style="display:inline;">0</div> 
+	</p>
+	Name: <input type="text" name="customer" id="customerName"/>
+	<input type="submit" value="Place Order"/>
+</form>
+<script type="text/javascript" src="javascripts/orderFront.js"></script>

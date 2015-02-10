@@ -17,5 +17,5 @@ customer: String,
 ingredients: [String]
 });
 
-module.exports.Orders = mongoose.model('Orders',orderSchema);
+module.exports.Order = mongoose.model('Orders',orderSchema);
 
