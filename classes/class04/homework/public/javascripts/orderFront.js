@@ -20,12 +20,11 @@ $('.ingredients').click(function(){
 $('#orderForm').submit(function(event){
 	//Submission of an order
 	event.preventDefault();
-	
 	var formData = {ingredients:ingredientList,customer:$('#customerName').val()};
-
 	console.log(formData);
 	$.post("/order/placeOrder",formData).done(function(data,status){
 		console.log(data);
+		$('#displaySubmit').css('display','initial');
 	}).error(function(data,stats){
 		console.log("addNew error");
 	});
