@@ -4,6 +4,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var exphbs  = require('express-handlebars');
+var PORT = process.env.PORT || 3000;
 
 var ingredients = require('./routes/ingredients')
 var order = require('./routes/order')
@@ -40,4 +41,4 @@ app.get('/kitchen/list',kitchen.getList);
 app.post('/kitchen/complete',kitchen.complete);
 
 
-app.listen(3000);
+app.listen(PORT);

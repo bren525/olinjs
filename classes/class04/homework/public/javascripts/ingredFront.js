@@ -1,5 +1,5 @@
 var grabList = function(){
-	console.log("grabbing list");
+	//Dynamically refreshes the list using ajax
 	$.get("ingredients/list").done(function(data,status){
 		$("#ingredientList").html(data);
 	}).error(function(data,status){
@@ -7,6 +7,7 @@ var grabList = function(){
 	});
 }
 $('#addForm').submit(function(event){
+	//Submission of new ingredient
 	event.preventDefault();
 	formData = $('#addForm').serialize();
 	$.post("/ingredients/add",formData).done(function(data,status){
@@ -16,8 +17,5 @@ $('#addForm').submit(function(event){
 	});
 });
 
-$(document).ready(function(){
-	console.log("ready");
-	grabList();
-});
+grabList();
 

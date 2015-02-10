@@ -1,4 +1,5 @@
 var grabOrderList = function(){
+//Refreshes list of orders dynamically using ajax
 	console.log("grabbing list");
 	$.get("kitchen/list")
 	.done(function(data,status){

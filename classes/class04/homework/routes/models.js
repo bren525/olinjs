@@ -1,3 +1,5 @@
+//Sets up MongoDB, including Ingredients and Order models
+
 var mongoose = require('mongoose');
 
 var mongoURI = process.env.MONGOURI || "mongodb://localhost/test";

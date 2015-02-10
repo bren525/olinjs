@@ -1,6 +1,6 @@
 <ul>
 {{#each list}}
-  <form action="Blank" method="GET" class = "editForm" style='float:left;'>
+  <form action="Blank" method="GET" class = "editForm" style='float:left;{{#if this.out}}opacity:.2;{{else}}{{/if}}'>
   Name: <input type="text" name="name" value="{{this.name}}"/>
   Price: <input type="text" name="price" value="{{this.price}}"/>
   <input type="text" name="id" value="{{this._id}}" style='display: none;'/>
